@@ -19,7 +19,7 @@ const ProjectsSection = ({ language }) => {
       duration: t.project1.duration,
       team: t.project1.team,
       image: "/restaurant-management-dashboard.png",
-      github: "https://github.com/quangquy2k3",
+      github: "https://github.com/quangquy-coding/RestaurantQuangQuy",
       demo: "#",
     },
     {
@@ -36,7 +36,7 @@ const ProjectsSection = ({ language }) => {
       duration: t.project2.duration,
       team: t.project2.team,
       image: "/food-ordering-app-interface.jpg",
-      github: "https://github.com/quangquy2k3",
+      github: "https://github.com/quangquy-coding/RestaurantQuangQuy",
       demo: "#",
     },
   ];
@@ -65,7 +65,7 @@ const ProjectsSection = ({ language }) => {
               <div className="md:flex">
                 <div className="md:w-1/2">
                   <img
-                    src={Nhahang}
+                    src={project.image || "/placeholder.svg"}
                     alt={project.title}
                     className="w-full h-full object-cover"
                   />
