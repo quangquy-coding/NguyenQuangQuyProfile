@@ -65,7 +65,7 @@ const ProjectsSection = ({ language }) => {
               <div className="md:flex">
                 <div className="md:w-1/2">
                   <img
-                    src={project.image || "/placeholder.svg"}
+                    src={Nhahang}
                     alt={project.title}
                     className="w-full h-full object-cover"
                   />
