@@ -12,6 +12,7 @@ import LanguagesSection from "./components/LanguagesSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import ThemeTest from "./components/ThemeTest";
+import AdvancedThemeToggle from "./components/AdvancedThemeToggle";
 
 function AppContent() {
   const { isLoading } = useTheme();
@@ -54,6 +55,10 @@ function AppContent() {
         <ContactSection language={language} />
       </main>
       <Footer language={language} />
+      
+      {/* Facebook-style floating theme toggle */}
+      <AdvancedThemeToggle variant="facebook" />
+      
       {process.env.NODE_ENV === 'development' && <ThemeTest />}
     </div>
   );

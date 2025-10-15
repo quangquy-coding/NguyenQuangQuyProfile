@@ -34,24 +34,39 @@ export const ThemeProvider = ({ children }) => {
 
   useEffect(() => {
     if (!isLoading) {
-      // Apply theme to document with smooth transition
+      // Apply theme to document with Facebook-style smooth transition
       const root = document.documentElement;
+      const body = document.body;
       
       // Add transition class for smooth switching
       root.classList.add("theme-transition");
+      body.classList.add("theme-switching");
+      
+      // Add a subtle overlay during transition
+      const overlay = document.createElement('div');
+      overlay.className = 'fixed inset-0 bg-black/5 dark:bg-white/5 pointer-events-none z-50 transition-opacity duration-300';
+      body.appendChild(overlay);
       
       if (darkMode) {
         root.classList.add("dark");
         localStorage.setItem("theme", "dark");
+        // Add dark mode specific body classes
+        body.style.backgroundColor = '#0f172a';
       } else {
         root.classList.remove("dark");
         localStorage.setItem("theme", "light");
+        // Add light mode specific body classes
+        body.style.backgroundColor = '#ffffff';
       }
       
-      // Remove transition class after animation
+      // Remove transition classes and overlay after animation
       setTimeout(() => {
         root.classList.remove("theme-transition");
-      }, 300);
+        body.classList.remove("theme-switching");
+        if (overlay.parentNode) {
+          overlay.remove();
+        }
+      }, 400);
     }
   }, [darkMode, isLoading]);
 

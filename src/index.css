@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Custom animations for dark mode */
+/* Enhanced animations for Facebook-style theme toggle */
 @keyframes spin-slow {
   from {
     transform: rotate(0deg);
@@ -30,29 +30,89 @@
   }
 }
 
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 30px rgba(59, 130, 246, 0.6);
+  }
+}
+
+@keyframes theme-switch {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .animate-spin-slow {
-  animation: spin-slow 3s linear infinite;
+  animation: spin-slow 8s linear infinite;
 }
 
 .animate-fade-in {
-  animation: fade-in 0.5s ease-out;
+  animation: fade-in 0.3s ease-out;
 }
 
 .animate-slide-in {
   animation: slide-in 0.3s ease-out;
 }
 
-/* Smooth theme transitions - chỉ áp dụng khi cần thiết */
+.animate-twinkle {
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+.animate-twinkle-delay {
+  animation: twinkle 2s ease-in-out infinite 0.5s;
+}
+
+.animate-twinkle-delay-2 {
+  animation: twinkle 2s ease-in-out infinite 1s;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-theme-switch {
+  animation: theme-switch 0.3s ease-in-out;
+}
+
+/* Facebook-style smooth theme transitions */
 .theme-transition * {
-  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Enhanced transitions for theme switching */
 .theme-transition {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Đảm bảo nội dung không bị ảnh hưởng */
+/* Theme switching body class */
+.theme-switching {
+  overflow: hidden;
+}
+
+/* Preserve media elements during transition */
 .theme-transition img,
 .theme-transition video,
 .theme-transition canvas,
@@ -60,9 +120,24 @@
   transition: none !important;
 }
 
-/* Smooth toggle animation */
+/* Enhanced toggle animations */
 .theme-transition .toggle-circle {
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Facebook-style page overlay during theme switch */
+.theme-overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(45deg, rgba(0,0,0,0.1), rgba(255,255,255,0.1));
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.theme-switching .theme-overlay {
+  opacity: 1;
 }
 
 /* Dark mode specific improvements */
