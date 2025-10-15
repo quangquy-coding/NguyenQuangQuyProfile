@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, Download, Globe } from "lucide-react";
 import { translations } from "../lib/translations.js";
 import SimpleThemeToggle from "./SimpleThemeToggle";
+import CVDownload from "./CVDownload";
 
 const Navbar = ({ language, toggleLanguage }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,9 +29,7 @@ const Navbar = ({ language, toggleLanguage }) => {
     { name: t.contact, href: "#contact" },
   ];
 
-  const handleDownloadCV = () => {
-    alert("CV download feature - Connect to your actual CV file");
-  };
+
 
   return (
     <nav
@@ -60,13 +59,7 @@ const Navbar = ({ language, toggleLanguage }) => {
               </a>
             ))}
 
-            <button
-              onClick={handleDownloadCV}
-              className="group flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-teal-500 dark:to-cyan-500 text-white rounded-xl hover:shadow-lg hover:shadow-blue-500/25 dark:hover:shadow-teal-500/25 transition-all duration-300 hover:scale-105 font-semibold"
-            >
-              <Download size={18} />
-              <span>{t.cv}</span>
-            </button>
+            <CVDownload language={language} />
 
             <button
               onClick={toggleLanguage}
@@ -113,13 +106,7 @@ const Navbar = ({ language, toggleLanguage }) => {
                 {item.name}
               </a>
             ))}
-            <button
-              onClick={handleDownloadCV}
-              className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 dark:bg-teal-500 text-white rounded-lg hover:bg-blue-700 dark:hover:bg-teal-600 transition-colors"
-            >
-              <Download size={18} />
-              <span>{t.cv}</span>
-            </button>
+            <CVDownload language={language} className="w-full" />
           </div>
         </div>
       )}
