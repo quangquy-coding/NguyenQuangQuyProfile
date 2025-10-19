@@ -3,7 +3,7 @@
 Portfolio cá nhân của Full-stack Web Developer với React + Vite và TailwindCSS.
 
 ## 🚀 Demo
-[Live Demo](https://your-portfolio-url.com) | [GitHub](https://github.com/quangquy-coding/NguyenQuangQuy)
+[Live Demo](https://nguyenquangquy.netlify.app/) | [GitHub](https://github.com/quangquy-coding/NguyenQuangQuy)
 
 ## 📋 Tính năng
 
