@@ -19,16 +19,18 @@ const HeroSection = ({ language }) => {
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <div className="space-y-4">
+            <div className="space-y-6">
               <p className="text-blue-600 dark:text-teal-400 font-semibold text-lg animate-fade-in opacity-0" style={{animationDelay: '200ms', animationFillMode: 'forwards'}}>
                 {t.greeting}
               </p>
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-gray-900 dark:from-white dark:via-teal-200 dark:to-white bg-clip-text text-transparent animate-fade-in opacity-0" style={{animationDelay: '400ms', animationFillMode: 'forwards'}}>
+              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-gray-900 dark:from-white dark:via-teal-200 dark:to-white bg-clip-text text-transparent animate-fade-in opacity-0 leading-tight" style={{animationDelay: '400ms', animationFillMode: 'forwards'}}>
                 {t.name}
               </h1>
-              <p className="text-2xl md:text-3xl text-gray-600 dark:text-gray-400 font-medium animate-fade-in opacity-0" style={{animationDelay: '600ms', animationFillMode: 'forwards'}}>
-                <span className="inline-block animate-pulse">💻</span> {t.title}
-              </p>
+              <div className="pt-4">
+                <p className="text-2xl md:text-3xl text-gray-600 dark:text-gray-400 font-medium animate-fade-in opacity-0" style={{animationDelay: '600ms', animationFillMode: 'forwards'}}>
+                  <span className="inline-block animate-pulse">💻</span> {t.title}
+                </p>
+              </div>
             </div>
 
             <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed animate-fade-in opacity-0" style={{animationDelay: '800ms', animationFillMode: 'forwards'}}>
