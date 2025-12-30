@@ -56,7 +56,7 @@ const ContactSection = ({ language }) => {
             {t.title}
           </h2>
           <div className="w-20 h-1 bg-blue-600 dark:bg-teal-500 mx-auto"></div>
-          <p className="mt-4 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="mt-4 text-black dark:text-white max-w-2xl mx-auto">
             {t.subtitle}
           </p>
         </div>
@@ -78,7 +78,7 @@ const ContactSection = ({ language }) => {
                       {info.icon}
                     </div>
                     <div>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">
+                      <p className="text-sm text-gray-700 dark:text-gray-300">
                         {info.title}
                       </p>
                       <p className="font-semibold text-gray-900 dark:text-white">
@@ -115,10 +115,10 @@ const ContactSection = ({ language }) => {
             </div>
 
             <div className="p-6 bg-blue-50 dark:bg-gray-800 rounded-xl border-l-4 border-blue-600 dark:border-teal-500">
-              <h4 className="font-bold text-gray-900 dark:text-white mb-2">
+              <h4 className="font-bold text-blue-600 dark:text-teal-400 mb-2">
                 {t.availability}
               </h4>
-              <p className="text-gray-600 dark:text-gray-400">
+              <p className="text-blue-800 dark:text-teal-300 font-medium leading-relaxed">
                 {t.availabilityText}
               </p>
             </div>

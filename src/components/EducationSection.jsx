@@ -82,10 +82,10 @@ const EducationSection = ({ language }) => {
                       </ul>
                     </div>
 
-                    <div className="mt-4 p-4 bg-blue-50 dark:bg-gray-800 rounded-lg">
-                      <p className="text-gray-700 dark:text-gray-300">
-                        <span className="font-semibold">{t.focus}</span>{" "}
-                        {t.focusDescription}
+                    <div className="mt-4 p-4 bg-blue-50 dark:bg-gray-800 rounded-lg border-l-4 border-blue-600 dark:border-teal-500">
+                      <p className="text-blue-800 dark:text-teal-300 leading-relaxed">
+                        <span className="font-bold text-blue-600 dark:text-teal-400">{t.focus}</span>{" "}
+                        <span className="font-medium">{t.focusDescription}</span>
                       </p>
                     </div>
                   </div>
