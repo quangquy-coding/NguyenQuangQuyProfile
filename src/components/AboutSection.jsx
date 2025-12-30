@@ -51,19 +51,19 @@ const AboutSection = ({ language }) => {
           </div>
 
           <div className="space-y-6">
-            <h3 className="text-3xl font-bold text-black dark:text-white">
+            <h3 className="text-3xl font-bold text-gray-900 dark:text-white">
               {t.heading}
             </h3>
 
-            <p className="text-gray-700 dark:text-gray-200 leading-relaxed">
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
               {t.paragraph1}
             </p>
 
-            <p className="text-gray-700 dark:text-gray-200 leading-relaxed">
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
               {t.paragraph2}
             </p>
 
-            <p className="text-gray-700 dark:text-gray-200 leading-relaxed">
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
               {t.paragraph3}
             </p>
 
@@ -76,10 +76,10 @@ const AboutSection = ({ language }) => {
                   <div className="text-blue-600 dark:text-teal-400 mb-2">
                     {item.icon}
                   </div>
-                  <h4 className="font-semibold text-black dark:text-white mb-1">
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">
                     {item.title}
                   </h4>
-                  <p className="text-sm text-gray-700 dark:text-gray-200">
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
                     {item.description}
                   </p>
                 </div>

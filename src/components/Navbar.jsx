@@ -51,7 +51,7 @@ const Navbar = ({ language, toggleLanguage }) => {
               <a
                 key={item.name}
                 href={item.href}
-                className="relative text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-teal-400 transition-all duration-300 font-medium group px-3 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800/50"
+                className="relative text-gray-900 dark:text-gray-200 hover:text-white dark:hover:text-white transition-all duration-300 font-medium group px-3 py-2 rounded-lg hover:bg-blue-600 dark:hover:bg-teal-500"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 {item.name}
@@ -63,7 +63,7 @@ const Navbar = ({ language, toggleLanguage }) => {
 
             <button
               onClick={toggleLanguage}
-              className="group p-3 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700/70 transition-all duration-300 flex items-center gap-2 border border-gray-200/50 dark:border-gray-700/50 hover:border-blue-300 dark:hover:border-teal-400 hover:shadow-lg"
+              className="group p-3 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm text-gray-900 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-gray-700/70 transition-all duration-300 flex items-center gap-2 border border-gray-200/50 dark:border-gray-700/50 hover:border-blue-300 dark:hover:border-teal-400 hover:shadow-lg"
               aria-label="Toggle language"
             >
               <Globe size={20} />
@@ -76,7 +76,7 @@ const Navbar = ({ language, toggleLanguage }) => {
           <div className="md:hidden flex items-center gap-2">
             <button
               onClick={toggleLanguage}
-              className="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
+              className="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-gray-200"
               aria-label="Toggle language"
             >
               <Globe size={20} />
@@ -84,7 +84,7 @@ const Navbar = ({ language, toggleLanguage }) => {
             <SimpleThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
+              className="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-gray-200"
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -101,7 +101,7 @@ const Navbar = ({ language, toggleLanguage }) => {
                 key={item.name}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-teal-400 transition-colors font-medium"
+                className="block text-gray-900 dark:text-gray-200 hover:text-blue-600 dark:hover:text-teal-400 transition-colors font-medium"
               >
                 {item.name}
               </a>

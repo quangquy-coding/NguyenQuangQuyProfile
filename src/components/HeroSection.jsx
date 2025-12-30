@@ -27,17 +27,17 @@ const HeroSection = ({ language }) => {
                 {t.name}
               </h1>
               <div className="pt-4">
-                <p className="text-2xl md:text-3xl text-black dark:text-white font-medium animate-fade-in opacity-0" style={{animationDelay: '600ms', animationFillMode: 'forwards'}}>
+                <p className="text-2xl md:text-3xl text-gray-900 dark:text-white font-medium animate-fade-in opacity-0" style={{animationDelay: '600ms', animationFillMode: 'forwards'}}>
                   <span className="inline-block animate-pulse">💻</span> {t.title}
                 </p>
               </div>
             </div>
 
-            <p className="text-black dark:text-white leading-relaxed animate-fade-in opacity-0" style={{animationDelay: '800ms', animationFillMode: 'forwards'}}>
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed animate-fade-in opacity-0" style={{animationDelay: '800ms', animationFillMode: 'forwards'}}>
               {t.description}
             </p>
 
-            <div className="flex items-center gap-2 text-black dark:text-white">
+            <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
               <MapPin size={20} className="text-blue-600 dark:text-teal-400" />
               <span>{t.location}</span>
             </div>
