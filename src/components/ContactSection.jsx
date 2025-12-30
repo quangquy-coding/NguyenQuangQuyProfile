@@ -99,17 +99,17 @@ const ContactSection = ({ language }) => {
                   href="https://github.com/quangquy-coding"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 bg-white dark:bg-gray-800 rounded-lg hover:bg-blue-600 dark:hover:bg-teal-500 hover:text-white transition-all group"
+                  className="group p-4 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-xl hover:bg-gray-800 hover:shadow-gray-500/25 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-xl border border-gray-200/50 dark:border-gray-700/50"
                 >
-                  <Github size={28} />
+                  <Github size={28} className="group-hover:animate-pulse" />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/quy-nguyen-b00032200/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 bg-white dark:bg-gray-800 rounded-lg hover:bg-blue-600 dark:hover:bg-teal-500 hover:text-white transition-all group"
+                  className="group p-4 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-xl hover:bg-blue-600 hover:shadow-blue-500/25 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-xl border border-gray-200/50 dark:border-gray-700/50"
                 >
-                  <Linkedin size={28} />
+                  <Linkedin size={28} className="group-hover:animate-pulse" />
                 </a>
               </div>
             </div>
