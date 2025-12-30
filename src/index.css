@@ -140,32 +140,154 @@
   opacity: 1;
 }
 
-/* Dark mode specific improvements */
+/* Enhanced dark mode with better contrast */
 .dark {
   color-scheme: dark;
+  background-color: #000000;
 }
 
-/* Enhanced focus states for dark mode */
-.dark input:focus,
-.dark textarea:focus,
-.dark select:focus {
-  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.1);
+/* Light mode with pure white */
+:root {
+  background-color: #ffffff;
 }
 
-/* Smooth scrollbar for dark mode */
-.dark ::-webkit-scrollbar {
-  width: 8px;
+/* High contrast backgrounds */
+.bg-gray-50 {
+  background-color: #ffffff;
 }
 
-.dark ::-webkit-scrollbar-track {
-  background: #1f2937;
+.dark .bg-gray-50 {
+  background-color: #000000;
 }
 
-.dark ::-webkit-scrollbar-thumb {
-  background: #4b5563;
-  border-radius: 4px;
+.bg-gray-900 {
+  background-color: #000000;
 }
 
-.dark ::-webkit-scrollbar-thumb:hover {
-  background: #6b7280;
+.dark .bg-gray-900 {
+  background-color: #000000;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.dark .bg-white {
+  background-color: #111111;
+}
+
+.bg-gray-800 {
+  background-color: #1a1a1a;
+}
+
+.dark .bg-gray-800 {
+  background-color: #0a0a0a;
+}
+
+/* High contrast text */
+.text-gray-900 {
+  color: #000000;
+}
+
+.dark .text-gray-900 {
+  color: #ffffff;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.dark .text-white {
+  color: #ffffff;
+}
+
+.text-gray-600 {
+  color: #404040;
+}
+
+.dark .text-gray-600 {
+  color: #cccccc;
+}
+
+.text-gray-400 {
+  color: #666666;
+}
+
+.dark .text-gray-400 {
+  color: #aaaaaa;
+}
+
+.text-gray-300 {
+  color: #777777;
+}
+
+.dark .text-gray-300 {
+  color: #dddddd;
+}
+
+.text-gray-700 {
+  color: #333333;
+}
+
+.dark .text-gray-700 {
+  color: #eeeeee;
+}
+
+/* High contrast borders */
+.border-gray-200 {
+  border-color: #e0e0e0;
+}
+
+.dark .border-gray-200 {
+  border-color: #333333;
+}
+
+.border-gray-700 {
+  border-color: #444444;
+}
+
+.dark .border-gray-700 {
+  border-color: #666666;
+}
+
+.border-gray-800 {
+  border-color: #333333;
+}
+
+.dark .border-gray-800 {
+  border-color: #555555;
+}
+
+/* Enhanced glassmorphism with better contrast */
+.bg-white\/80 {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.dark .bg-white\/80 {
+  background-color: rgba(17, 17, 17, 0.95);
+}
+
+.bg-gray-800\/80 {
+  background-color: rgba(26, 26, 26, 0.95);
+}
+
+.dark .bg-gray-800\/80 {
+  background-color: rgba(10, 10, 10, 0.95);
+}
+
+/* High contrast shadows */
+.shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+}
+
+.dark .shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(255, 255, 255, 0.1), 0 10px 10px -5px rgba(255, 255, 255, 0.05);
+}
+
+.shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+}
+
+.dark .shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(255, 255, 255, 0.15);
 }

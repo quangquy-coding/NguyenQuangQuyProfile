@@ -44,19 +44,21 @@ export const ThemeProvider = ({ children }) => {
       
       // Add a subtle overlay during transition
       const overlay = document.createElement('div');
-      overlay.className = 'fixed inset-0 bg-black/5 dark:bg-white/5 pointer-events-none z-50 transition-opacity duration-300';
+      overlay.className = 'fixed inset-0 bg-black/10 dark:bg-white/10 pointer-events-none z-50 transition-opacity duration-300';
       body.appendChild(overlay);
       
       if (darkMode) {
         root.classList.add("dark");
         localStorage.setItem("theme", "dark");
-        // Add dark mode specific body classes
-        body.style.backgroundColor = '#0f172a';
+        // Pure black background for dark mode
+        body.style.backgroundColor = '#000000';
+        body.style.color = '#ffffff';
       } else {
         root.classList.remove("dark");
         localStorage.setItem("theme", "light");
-        // Add light mode specific body classes
+        // Pure white background for light mode
         body.style.backgroundColor = '#ffffff';
+        body.style.color = '#000000';
       }
       
       // Remove transition classes and overlay after animation
