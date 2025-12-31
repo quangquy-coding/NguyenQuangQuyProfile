@@ -35,8 +35,8 @@ const Navbar = ({ language, toggleLanguage }) => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl shadow-2xl border-b border-white/20 dark:border-gray-700/50"
-          : "bg-transparent"
+          ? "bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl shadow-2xl border-b border-white/20 dark:border-gray-700/50"
+          : "bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm md:bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,32 +76,32 @@ const Navbar = ({ language, toggleLanguage }) => {
           <div className="md:hidden flex items-center gap-2">
             <button
               onClick={toggleLanguage}
-              className="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-gray-200"
+              className="p-2 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors border border-gray-300 dark:border-gray-600 shadow-sm"
               aria-label="Toggle language"
             >
-              <Globe size={20} />
+              <Globe size={20} className="text-gray-700 dark:text-white" />
             </button>
             <SimpleThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-gray-200"
+              className="p-2 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors border border-gray-300 dark:border-gray-600 shadow-sm"
               aria-label="Toggle menu"
             >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
+              {isOpen ? <X size={24} className="text-gray-700 dark:text-white" /> : <Menu size={24} className="text-gray-700 dark:text-white" />}
             </button>
           </div>
         </div>
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl border-t border-gray-200/50 dark:border-gray-700/50 animate-slide-in">
+        <div className="md:hidden bg-white dark:bg-gray-900 backdrop-blur-xl border-t border-gray-200 dark:border-gray-700 animate-slide-in shadow-lg">
           <div className="px-4 py-6 space-y-4">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="block text-gray-900 dark:text-gray-200 hover:text-blue-600 dark:hover:text-teal-400 transition-colors font-medium"
+                className="block text-gray-800 dark:text-white hover:text-blue-600 dark:hover:text-teal-400 transition-colors font-medium py-2"
               >
                 {item.name}
               </a>
